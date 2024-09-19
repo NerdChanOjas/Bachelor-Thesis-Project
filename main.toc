@@ -1,0 +1,17 @@
+\textbf {Title}\hfill \textbf {Page No.}\par 
+\contentsline {chapter}{CERTIFICATE}{1}{}%
+\contentsline {chapter}{DECLARATION}{2}{}%
+\contentsline {chapter}{ACKNOWLEDGEMENT}{3}{}%
+\contentsline {chapter}{TABLE OF CONTENTS}{4}{}%
+\contentsline {chapter}{LIST OF TABLES}{5}{}%
+\contentsline {chapter}{LIST OF FIGURES}{6}{}%
+\contentsline {chapter}{Introduction}{7}{}%
+\contentsline {section}{\numberline {0.1}Section 1 of Intro}{7}{}%
+\contentsline {section}{\numberline {0.2}Section 1 of Intro}{7}{}%
+\contentsline {chapter}{\numberline {1}Motivation}{8}{}%
+\contentsline {chapter}{\numberline {2}Literature Review}{9}{}%
+\contentsline {chapter}{References}{9}{}%
+\contentsline {chapter}{Appendices}{10}{}%
+\setcounter {tocdepth}{0}
+\contentsline {chapter}{\numberline {A}Code Attachments}{11}{}%
+\contentsline {section}{\numberline {A.1}Lorem Ipsum}{11}{}%
