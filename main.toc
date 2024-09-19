@@ -3,15 +3,17 @@
 \contentsline {chapter}{DECLARATION}{2}{}%
 \contentsline {chapter}{ACKNOWLEDGEMENT}{3}{}%
 \contentsline {chapter}{TABLE OF CONTENTS}{4}{}%
-\contentsline {chapter}{LIST OF TABLES}{5}{}%
-\contentsline {chapter}{LIST OF FIGURES}{6}{}%
-\contentsline {chapter}{Introduction}{7}{}%
-\contentsline {section}{\numberline {0.1}Section 1 of Intro}{7}{}%
-\contentsline {section}{\numberline {0.2}Section 1 of Intro}{7}{}%
-\contentsline {chapter}{\numberline {1}Motivation}{8}{}%
-\contentsline {chapter}{\numberline {2}Literature Review}{9}{}%
-\contentsline {chapter}{References}{9}{}%
-\contentsline {chapter}{Appendices}{10}{}%
+\contentsline {chapter}{LIST OF TABLES}{6}{}%
+\contentsline {chapter}{LIST OF FIGURES}{7}{}%
+\contentsline {chapter}{\numberline {1}Introduction}{8}{}%
+\contentsline {section}{\numberline {1.1}Section 1 of Intro}{8}{}%
+\contentsline {section}{\numberline {1.2}Section 1 of Intro}{8}{}%
+\contentsline {chapter}{\numberline {2}Motivation}{9}{}%
+\contentsline {chapter}{\numberline {3}Literature Review}{10}{}%
+\contentsline {chapter}{\numberline {4}Problem Statement}{13}{}%
+\contentsline {chapter}{\numberline {5}Objectives}{15}{}%
+\contentsline {chapter}{References}{15}{}%
+\contentsline {chapter}{Appendices}{18}{}%
 \setcounter {tocdepth}{0}
-\contentsline {chapter}{\numberline {A}Code Attachments}{11}{}%
-\contentsline {section}{\numberline {A.1}Lorem Ipsum}{11}{}%
+\contentsline {chapter}{\numberline {A}Code Attachments}{19}{}%
+\contentsline {section}{\numberline {A.1}Lorem Ipsum}{19}{}%

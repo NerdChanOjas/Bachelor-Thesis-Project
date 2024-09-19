@@ -1,11 +1,104 @@
-@INPROCEEDINGS{8748678,
-  author={A. {Moravejosharieh} and K. {Ahmadi} and S. {Ahmad}},
-  booktitle={2018 International Conference on Advances in Computing, Communication Control and Networking (ICACCCN)}, 
-  title={A Fuzzy Logic Approach To Increase Quality of Service in Software Defined Networking}, 
-  year={2018},
+@article{paper2,
+  title = {Applying generative AI with retrieval augmented generation to summarize and extract key clinical information from electronic health records},
+  journal = {Journal of Biomedical Informatics},
+  volume = {156},
+  pages = {104662},
+  year = {2024},
+  issn = {1532-0464},
+  doi = {https://doi.org/10.1016/j.jbi.2024.104662},
+  url = {https://www.sciencedirect.com/science/article/pii/S1532046424000807},
+  author = {Mohammad Alkhalaf and Ping Yu and Mengyang Yin and Chao Deng},
+  keywords = {Generative AI, Nursing notes, LLAMA, Malnutrition, Summarization, RAG},
+  abstract = {Background
+Malnutrition is a prevalent issue in aged care facilities (RACFs), leading to adverse health outcomes. The ability to efficiently extract key clinical information from a large volume of data in electronic health records (EHR) can improve understanding about the extent of the problem and developing effective interventions. This research aimed to test the efficacy of zero-shot prompt engineering applied to generative artificial intelligence (AI) models on their own and in combination with retrieval augmented generation (RAG), for the automating tasks of summarizing both structured and unstructured data in EHR and extracting important malnutrition information.
+Methodology
+We utilized Llama 2 13B model with zero-shot prompting. The dataset comprises unstructured and structured EHRs related to malnutrition management in 40 Australian RACFs. We employed zero-shot learning to the model alone first, then combined it with RAG to accomplish two tasks: generate structured summaries about the nutritional status of a client and extract key information about malnutrition risk factors. We utilized 25 notes in the first task and 1,399 in the second task. We evaluated the model's output of each task manually against a gold standard dataset.
+Result
+The evaluation outcomes indicated that zero-shot learning applied to generative AI model is highly effective in summarizing and extracting information about nutritional status of RACFs' clients. The generated summaries provided concise and accurate representation of the original data with an overall accuracy of 93.25%. The addition of RAG improved the summarization process, leading to a 6% increase and achieving an accuracy of 99.25%. The model also proved its capability in extracting risk factors with an accuracy of 90%. However, adding RAG did not further improve accuracy in this task. Overall, the model has shown a robust performance when information was explicitly stated in the notes; however, it could encounter hallucination limitations, particularly when details were not explicitly provided.
+Conclusion
+This study demonstrates the high performance and limitations of applying zero-shot learning to generative AI models to automatic generation of structured summarization of EHRs data and extracting key clinical information. The inclusion of the RAG approach improved the model performance and mitigated the hallucination problem.}
+}
+
+@InProceedings{10.1007/978-3-031-66538-7_22,
+author="Ghanbari Haez, Saba
+and Segala, Marina
+and Bellan, Patrizio
+and Magnolini, Simone
+and Sanna, Leonardo
+and Consolandi, Monica
+and Dragoni, Mauro",
+editor="Finkelstein, Joseph
+and Moskovitch, Robert
+and Parimbelli, Enea",
+title="A Retrieval-Augmented Generation Strategy to Enhance Medical Chatbot Reliability",
+booktitle="Artificial Intelligence in Medicine",
+year="2024",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="213--223",
+abstract="The advent of Large Language Models opened new perspectives concerning their usage within the digital health domain. However, their intrinsic probabilistic and unpredictable behavior needs the design of trustworthy strategies aiming to avoid the creation of hallucinations that, especially within the digital health domain, may lead to severe harm. Such an issue has been addressed with the adoption of Retrieval-Augmented Generation solutions, where the text generation task is supported by controlled knowledge injected into the prompts. Even if the hallucination issue is mitigated, the generation of certified information (such as trustworthy content granted by the system's owner) requires more sophisticated strategies. In this work, we propose an approach where the classic Retrieval-Augmented Generation pipeline is enhanced with a further initial step where the Large Language Model is asked to generate a preliminary text used to query the repository of certified information for presenting the appropriate content to the final user.",
+isbn="978-3-031-66538-7"
+}
+
+@misc{wu2024medicalgraphragsafe,
+      title={Medical Graph RAG: Towards Safe Medical Large Language Model via Graph Retrieval-Augmented Generation}, 
+      author={Junde Wu and Jiayuan Zhu and Yunli Qi},
+      year={2024},
+      eprint={2408.04187},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2408.04187}, 
+}
+
+@misc{xiong2024benchmarkingretrievalaugmentedgenerationmedicine,
+      title={Benchmarking Retrieval-Augmented Generation for Medicine}, 
+      author={Guangzhi Xiong and Qiao Jin and Zhiyong Lu and Aidong Zhang},
+      year={2024},
+      eprint={2402.13178},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2402.13178}, 
+}
+
+@article{YE202493,
+title = {Exploring a learning-to-rank approach to enhance the Retrieval Augmented Generation (RAG)-based electronic medical records search engines},
+journal = {Informatics and Health},
+volume = {1},
+number = {2},
+pages = {93-99},
+year = {2024},
+issn = {2949-9534},
+doi = {https://doi.org/10.1016/j.infoh.2024.07.001},
+url = {https://www.sciencedirect.com/science/article/pii/S2949953424000146},
+author = {Cheng Ye},
+keywords = {Retrieval Augmented Generation, Electronic medical records, Information retrieval, Large Language Model, Learning to rank},
+abstract = {Background
+This study addresses the challenge of enhancing Retrieval Augmented Generation (RAG) search engines for electronic medical records (EMR) by learning users' distinct search semantics. The specific aim is to develop a learning-to-rank system that improves the accuracy and relevance of search results to support RAG-based search engines.
+Methods
+Given a prompt or search query, the system first asks the user to label a few randomly selected documents, which contain some keywords, as relevant to the prompt or not. The system then identifies relevant sentences and adjusts word similarities by updating a medical semantic embedding. New documents are ranked by the number of relevant sentences identified by the weighted embedding. Only the top-ranked documents and sentences are provided to a Large-Language-Model (LLM) to generate answers for further review.
+Findings
+To evaluate our approach, four medical researchers labeled documents based on their relevance to specific diseases. We measured the information retrieval performance of our approach and two baseline methods. Results show that our approach achieved at least a 0.60 Precision-at-10 (P @ 10) score with only ten positive labels, outperforming the baseline methods. In our pilot study, we demonstrate that the learned semantic preference can transfer to the analysis of unseen datasets, boosting the accuracy of an RAG model in extracting and explaining cancer progression diagnoses from 0.14 to 0.50.
+Interpretation
+This study demonstrates that a customized learning-to-rank method can enhance state-of-the-art natural language models, such as LLMs, by quickly adapting to users' semantics. This approach supports EMR document retrieval and helps RAG models generate clinically meaningful answers to specific questions, underscoring the potential of user-tailored learning-to-rank methods in clinical practice.}
+}
+
+@misc{yang2024geometryqueriesquerybasedinnovations,
+      title={The Geometry of Queries: Query-Based Innovations in Retrieval-Augmented Generation}, 
+      author={Eric Yang and Jonathan Amar and Jong Ha Lee and Bhawesh Kumar and Yugang Jia},
+      year={2024},
+      eprint={2407.18044},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2407.18044}, 
+}
+
+@INPROCEEDINGS{10620139,
+  author={Hammane, Zakaria and Ben-Bouazza, Fatima-Ezzahraa and Fennan, Abdelhadi},
+  booktitle={2024 International Conference on Intelligent Systems and Computer Vision (ISCV)}, 
+  title={SelfRewardRAG: Enhancing Medical Reasoning with Retrieval-Augmented Generation and Self-Evaluation in Large Language Models}, 
+  year={2024},
   volume={},
   number={},
-  pages={68-73},
-  doi={10.1109/ICACCCN.2018.8748678}}
-  
-  
+  pages={1-8},
+  keywords={Accuracy;Databases;Computational modeling;Large language models;Decision making;Medical services;Real-time systems;Retrieval Augmented Generation;Large Language Models;Incorporation;Healthcare},
+  doi={10.1109/ISCV60512.2024.10620139}}

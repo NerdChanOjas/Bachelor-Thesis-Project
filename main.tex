@@ -69,7 +69,7 @@
 \begin{document}
 % Change the title below to your own title E.g. \title{MYPROJECTNAME}
 \title{\btptitle}
-\mainmatter
+\mainmatter{}
 % \tableofcontents
 % \section{Intro}
 % yo yo
@@ -100,14 +100,18 @@
 % This will ensure that your chapter will be added to the table of contents
 % \chapter{Introduction}
 \newpage
-\addcontentsline{toc}{chapter}{Introduction}
+\chapter{Introduction}
 \input{Introduction}
 \chapter{Motivation}
 \input{Motivation}
 \chapter{Literature Review}
 \input{LitReview}
 % Similarly create more chapters here
+\chapter{Problem Statement}
+\input{Problem}
 
+\chapter{Objectives}
+\input{Objective}
 
 % \newpage
 % The bibliography goes under a separate .bib file. To quote articles, just fill the appropriate headings in the bibliography file. 
@@ -121,7 +125,4 @@
   \chapter{Code Attachments}
   \input{appendix}
 \end{appendices}
-
-
-
 \end{document}
