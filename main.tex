@@ -12,6 +12,9 @@
 \usepackage{textcomp}
 \usepackage{xcolor}
 \usepackage{amsmath}
+\usepackage{titlesec}
+\usepackage{lmodern}
+
 \DeclareMathOperator*{\maxi}{max}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
@@ -66,6 +69,7 @@
 \renewcommand{\footrulewidth}{0pt}
 % Here you can insert your BTP Title here
 \newcommand{\btptitle}{RAG-LLM Healthcare Interaction System}
+\titlespacing*{\chapter}{0pt}{-40pt}{20pt}
 \begin{document}
 % Change the title below to your own title E.g. \title{MYPROJECTNAME}
 \title{\btptitle}
@@ -86,11 +90,11 @@
 \tableofcontents
 \newpage
 
-\addcontentsline{toc}{chapter}{LIST OF TABLES}
-\listoftables
-\newpage
-\addcontentsline{toc}{chapter}{LIST OF FIGURES}
-\listoffigures
+% \addcontentsline{toc}{chapter}{LIST OF TABLES}
+% \listoftables
+% \newpage
+% \addcontentsline{toc}{chapter}{LIST OF FIGURES}
+% \listoffigures
  
 
 % Create chapters by first adding a new .tex file with your chapter name. E.g. <ChapterFileName>.tex
@@ -109,9 +113,10 @@
 % Similarly create more chapters here
 \chapter{Problem Statement}
 \input{Problem}
-
 \chapter{Objectives}
 \input{Objective}
+\chapter{Requirements}
+\input{Requirements}
 
 % \newpage
 % The bibliography goes under a separate .bib file. To quote articles, just fill the appropriate headings in the bibliography file. 
@@ -119,10 +124,10 @@
 \bibliographystyle{IEEEtran}
 \bibliography{references}
 
-\begin{appendices}
-\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
-% Appendix chapters go here. Note that appendix will not show sections or subsections as the main chapters above in the table of contents. Also chapter numbering will be alphabetic e.g. (A,B,C etc) The example on the appendix also shows how to add programming code to a thesis.
-  \chapter{Code Attachments}
-  \input{appendix}
-\end{appendices}
+% \begin{appendices}
+% \addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+% % Appendix chapters go here. Note that appendix will not show sections or subsections as the main chapters above in the table of contents. Also chapter numbering will be alphabetic e.g. (A,B,C etc) The example on the appendix also shows how to add programming code to a thesis.
+%   \chapter{Code Attachments}
+%   \input{appendix}
+% \end{appendices}
 \end{document}
