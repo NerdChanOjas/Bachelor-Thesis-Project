@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.10.3)  21 SEP 2024 00:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.10.3)  22 SEP 2024 13:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -549,67 +549,59 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 20--28
 
  [4]
 Chapter 1.
-(Introduction.tex)
-Overfull \hbox (11.58286pt too wide) in paragraph at lines 3--109
-[]\OT1/lmr/m/n/13 As for now with the help of LLMs, such as GPT-4 and Retrieval-Augmented
+(Introduction.tex [5
+
+] [6]) [7]
+Chapter 2.
+(LitReview.tex
+Overfull \hbox (3.10074pt too wide) in paragraph at lines 8--9
+[]\OT1/lmr/m/n/13 Another no-table con-tri-bu-tion, who de-vel-oped a learning-to-rank ap-proach
  []
 
-[5
+[8
 
-] [6]
-Chapter 2.
-(Motivation.tex) [7
-
-]
+] [9]
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 26.
+ (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)) [10{C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
 Chapter 3.
-(LitReview.tex [8
-
-]) [9] [10]
-Chapter 4.
-(Problem.tex
-Overfull \hbox (3.3038pt too wide) in paragraph at lines 3--4
-[]\OT1/lmr/m/n/13 Recently, Large Lan-guage Mod-els (LLMs) and Retrieval-Augmented Gen-
+(Requirements.tex
+Overfull \hbox (12.3204pt too wide) in paragraph at lines 3--4
+[]\OT1/lmr/m/n/13 Programming Lan-guages and Frame-works: Python, LangChain, FastAPI 
  []
 
 ) [11
 
-] [12]
-Chapter 5.
-(Objective.tex
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 4.
- (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
-File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [13
+]
+Chapter 4.
+(Conclusion.tex) (main.bbl [12
 
-{C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]) [14]
-Chapter 6.
-(Requirements.tex) (main.bbl [15
-
-] [16
+] [13
 
 ]
-Underfull \hbox (badness 1147) in paragraph at lines 77--80
-\OT1/lmr/m/n/13 Porta-bil-ity and Ac-count-abil-ity Act of 1996 (HIPAA),'' On-line at
+Overfull \hbox (32.51428pt too wide) in paragraph at lines 78--83
+\OT1/lmr/m/n/13 https://telehealthandmedicinetoday.com/index.php/journal/article/view/252 
  []
 
-) [17] (main.aux)
+) [14] (main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 8980 strings out of 475550
- 140623 string characters out of 5763005
+ 8969 strings out of 475550
+ 140431 string characters out of 5763005
  1923238 words of memory out of 5000000
- 29990 multiletter control sequences out of 15000+600000
- 622677 words of font info for 82 fonts, out of 8000000 for 9000
+ 29985 multiletter control sequences out of 15000+600000
+ 628586 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,13n,69p,1762b,395s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 61i,13n,69p,1131b,395s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb>
-Output written on main.pdf (18 pages, 195053 bytes).
+Output written on main.pdf (15 pages, 195054 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
+ 72 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -21,27 +21,11 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{10.1007/978-3-031-66538-7_22}
-S.~Ghanbari~Haez, M.~Segala, P.~Bellan, S.~Magnolini, L.~Sanna, M.~Consolandi,
-  and M.~Dragoni, ``A retrieval-augmented generation strategy to enhance
-  medical chatbot reliability,'' in \emph{Artificial Intelligence in Medicine},
-  J.~Finkelstein, R.~Moskovitch, and E.~Parimbelli, Eds.\hskip 1em plus 0.5em
-  minus 0.4em\relax Cham: Springer Nature Switzerland, 2024, pp. 213--223.
-
 \bibitem{wu2024medicalgraphragsafe}
 \BIBentryALTinterwordspacing
 J.~Wu, J.~Zhu, and Y.~Qi, ``Medical graph rag: Towards safe medical large
   language model via graph retrieval-augmented generation,'' 2024. [Online].
   Available: \url{https://arxiv.org/abs/2408.04187}
-\BIBentrySTDinterwordspacing
-
-\bibitem{paper2}
-\BIBentryALTinterwordspacing
-M.~Alkhalaf, P.~Yu, M.~Yin, and C.~Deng, ``Applying generative ai with
-  retrieval augmented generation to summarize and extract key clinical
-  information from electronic health records,'' \emph{Journal of Biomedical
-  Informatics}, vol. 156, p. 104662, 2024. [Online]. Available:
-  \url{https://www.sciencedirect.com/science/article/pii/S1532046424000807}
 \BIBentrySTDinterwordspacing
 
 \bibitem{xiong2024benchmarkingretrievalaugmentedgenerationmedicine}
@@ -60,6 +44,12 @@ C.~Ye, ``Exploring a learning-to-rank approach to enhance the retrieval
   \url{https://www.sciencedirect.com/science/article/pii/S2949953424000146}
 \BIBentrySTDinterwordspacing
 
+\bibitem{10620139}
+Z.~Hammane, F.-E. Ben-Bouazza, and A.~Fennan, ``Selfrewardrag: Enhancing
+  medical reasoning with retrieval-augmented generation and self-evaluation in
+  large language models,'' in \emph{2024 International Conference on
+  Intelligent Systems and Computer Vision (ISCV)}, 2024, pp. 1--8.
+
 \bibitem{yang2024geometryqueriesquerybasedinnovations}
 \BIBentryALTinterwordspacing
 E.~Yang, J.~Amar, J.~H. Lee, B.~Kumar, and Y.~Jia, ``The geometry of queries:
@@ -67,15 +57,36 @@ E.~Yang, J.~Amar, J.~H. Lee, B.~Kumar, and Y.~Jia, ``The geometry of queries:
   Available: \url{https://arxiv.org/abs/2407.18044}
 \BIBentrySTDinterwordspacing
 
-\bibitem{10620139}
-Z.~Hammane, F.-E. Ben-Bouazza, and A.~Fennan, ``Selfrewardrag: Enhancing
-  medical reasoning with retrieval-augmented generation and self-evaluation in
-  large language models,'' in \emph{2024 International Conference on
-  Intelligent Systems and Computer Vision (ISCV)}, 2024, pp. 1--8.
+\bibitem{paper2}
+\BIBentryALTinterwordspacing
+M.~Alkhalaf, P.~Yu, M.~Yin, and C.~Deng, ``Applying generative ai with
+  retrieval augmented generation to summarize and extract key clinical
+  information from electronic health records,'' \emph{Journal of Biomedical
+  Informatics}, vol. 156, p. 104662, 2024. [Online]. Available:
+  \url{https://www.sciencedirect.com/science/article/pii/S1532046424000807}
+\BIBentrySTDinterwordspacing
 
-\bibitem{hipaa}
-{Centers for Medicare \& Medicaid Services}, ``{The Health Insurance
-  Portability and Accountability Act of 1996 (HIPAA)},'' Online at
-  http://www.cms.hhs.gov/hipaa/, 1996.
+\bibitem{10.1007/978-3-031-66538-7_22}
+S.~Ghanbari~Haez, M.~Segala, P.~Bellan, S.~Magnolini, L.~Sanna, M.~Consolandi,
+  and M.~Dragoni, ``A retrieval-augmented generation strategy to enhance
+  medical chatbot reliability,'' in \emph{Artificial Intelligence in Medicine},
+  J.~Finkelstein, R.~Moskovitch, and E.~Parimbelli, Eds.\hskip 1em plus 0.5em
+  minus 0.4em\relax Cham: Springer Nature Switzerland, 2024, pp. 213--223.
+
+\bibitem{Ganapathy}
+\BIBentryALTinterwordspacing
+F.~F. F. P.~K. Ganapathy, MCh~(NEURO), ``Artificial intelligence and healthcare
+  regulatory and legal concerns,'' \emph{Telehealth and Medicine Today},
+  vol.~6, no.~2, Apr. 2021. [Online]. Available:
+  \url{https://telehealthandmedicinetoday.com/index.php/journal/article/view/252}
+\BIBentrySTDinterwordspacing
+
+\bibitem{SundaraNarendran+2023+129+141}
+\BIBentryALTinterwordspacing
+K.~Sundara and N.~Narendran, ``The digital personal data protection act, 2023:
+  analysing india’s dynamic approach to data protection,'' \emph{Computer Law
+  Review International}, vol.~24, no.~5, pp. 129--141, 2023. [Online].
+  Available: \url{https://doi.org/10.9785/cri-2023-240502}
+\BIBentrySTDinterwordspacing
 
 \end{thebibliography}
