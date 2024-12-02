@@ -79,16 +79,19 @@
 % yo yo
 \addtocontents{toc}{\textbf{Title}\hfill\textbf{Page No.}\par}
 \input{titlepage}
-\addcontentsline{toc}{chapter}{CERTIFICATE}
+\addcontentsline{toc}{chapter}{Certificate}
 \input{bonafide}
-\addcontentsline{toc}{chapter}{DECLARATION}
+\addcontentsline{toc}{chapter}{Declaration}
 \input{declaration}
-\addcontentsline{toc}{chapter}{ACKNOWLEDGEMENT}
+\addcontentsline{toc}{chapter}{Acknowledgement}
 \input{acknowledgement}
-
-\addcontentsline{toc}{chapter}{TABLE OF CONTENTS}
+\vspace{-50pt}
+\addcontentsline{toc}{chapter}{Table of Contents}
 \tableofcontents
 \newpage
+
+\addcontentsline{toc}{chapter}{Abstract}
+\input{abstract}
 
 % \addcontentsline{toc}{chapter}{LIST OF TABLES}
 % \listoftables
@@ -117,8 +120,19 @@
 % \input{Objective}
 \chapter{Requirements}
 \input{Requirements}
+\chapter{Methodology}
+\input{Methodology}
+\chapter{Implementation}
+\input{Implementation}
+\chapter{Results}
+\input{Results}
+\chapter{Discussion}
+\input{Discussion}
 \chapter{Conclusion}
 \input{Conclusion}
+
+\chapter{Future Work}
+\input{FutureWork}
 
 % \newpage
 % The bibliography goes under a separate .bib file. To quote articles, just fill the appropriate headings in the bibliography file. 

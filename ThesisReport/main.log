@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.10.3)  22 SEP 2024 21:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.10.3)  30 NOV 2024 23:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"d:/BTP 7th Sem/main.tex"
-(d:/BTP 7th Sem/main.tex
+**"d:/BTP 7th Sem/ThesisReport/main.tex"
+(d:/BTP 7th Sem/ThesisReport/main.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
 (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
@@ -543,65 +543,75 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 20--28
 [][] 
  []
 
-[3]) (main.toc)
+[3]) (main.toc [4])
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
- [4]
+ [5] (abstract.tex [6])
 Chapter 1.
-(Introduction.tex [5
+(Introduction.tex [7
 
-] [6]) [7]
+] [8]) [9]
 Chapter 2.
-(LitReview.tex
-Overfull \hbox (3.10074pt too wide) in paragraph at lines 8--9
-[]\OT1/lmr/m/n/13 Another no-table con-tri-bu-tion, who de-vel-oped a learning-to-rank ap-proach
- []
+(LitReview.tex [10
 
-[8
-
-] [9]
+] [11]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 26.
  (C:\Users\ASUS\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)) [10{C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
-Chapter 3.
-(Requirements.tex
-Overfull \hbox (12.3204pt too wide) in paragraph at lines 3--4
-[]\OT1/lmr/m/n/13 Programming Lan-guages and Frame-works: Python, LangChain, FastAPI 
+)
+Overfull \hbox (2.44667pt too wide) in paragraph at lines 27--28
+\OT1/lmr/m/n/12 through nat-u-ral lan-guage queries, re-duc-ing the time spent on man-ual searches
  []
 
-) [11
+) [12{C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}]
+Chapter 3.
+(Requirements.tex) [13
 
 ]
 Chapter 4.
-(Conclusion.tex) (main.bbl [12
-
-] [13
+(Methodology.tex) [14
 
 ]
-Overfull \hbox (32.51428pt too wide) in paragraph at lines 78--83
-\OT1/lmr/m/n/13 https://telehealthandmedicinetoday.com/index.php/journal/article/view/252 
- []
+Chapter 5.
+(Implementation.tex) [15
 
-) [14] (main.aux)
+]
+Chapter 6.
+(Results.tex) [16
+
+]
+Chapter 7.
+(Discussion.tex) [17
+
+]
+Chapter 8.
+(Conclusion.tex) [18
+
+]
+Chapter 9.
+(FutureWork.tex) (main.bbl [19
+
+] [20
+
+]) [21] (main.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 8969 strings out of 475550
- 140431 string characters out of 5763005
+ 9017 strings out of 475550
+ 141720 string characters out of 5763005
  1923238 words of memory out of 5000000
- 29985 multiletter control sequences out of 15000+600000
+ 30015 multiletter control sequences out of 15000+600000
  628586 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,13n,69p,1131b,395s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 61i,13n,69p,1144b,395s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Users/ASUS/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmri12.pfb>
-Output written on main.pdf (15 pages, 195072 bytes).
+Output written on main.pdf (22 pages, 203315 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
+ 94 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
