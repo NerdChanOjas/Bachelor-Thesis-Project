@@ -5,14 +5,14 @@ import { Bell } from 'lucide-react';
 // Mock function to generate a daily tip
 const generateDailyTip = () => {
   const tips = [
-    "Try to get at least 30 minutes of moderate exercise today.",
-    "Remember to stay hydrated! Aim for 8 glasses of water.",
-    "Include more leafy greens in your diet for better nutrition.",
-    "Take short breaks every hour to reduce eye strain and improve posture.",
-    "Practice deep breathing exercises to reduce stress and improve focus."
+    "Prioritize Heart-Healthy Diet: Focus on a diet rich in vegetables, fruits, whole grains, lean proteins, and healthy fats. Limit salt, sugar, and saturated fats to maintain optimal heart health and support recovery.",
+    "Incorporate Regular Physical Activity: Engage in moderate-intensity exercises like brisk walking or swimming for 30 minutes most days. Consult your doctor before starting or adjusting your fitness routine post-heart attack.",
+    "Manage Stress Effectively: Practice stress-relief techniques like meditation, yoga, or deep breathing exercises. Chronic stress can strain your heart, so prioritize activities that promote mental and emotional well-being. ",
+    "Adhere to Medication and Follow-Ups: Take prescribed medications consistently and attend regular medical checkups to monitor heart health. Discuss any symptoms or concerns with your healthcare provider promptly.",
+    "Quit Smoking and Limit Alcohol: If you smoke, seek support to quit, as smoking is a major heart disease risk. Limit alcohol intake to moderate levels or avoid it altogether to reduce cardiovascular strain."
   ];
-//   return tips[Math.floor(Math.random() * tips.length)];
-  return tips;
+  return tips[Math.floor(Math.random() * tips.length)];
+  // return tips;
 };
 
 export default function DailyTip() {

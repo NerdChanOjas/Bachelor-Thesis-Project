@@ -16,9 +16,10 @@ import {
 
 // Mock data for doctors
 const doctors = [
-  { id: 1, name: "Dr. John Doe", specialty: "General Physician", photo: "/placeholder.svg?height=100&width=100", experience: "10 years", timings: "Tues, Thurs 12pm to 6pm" },
-  { id: 2, name: "Dr. Jane Smith", specialty: "Orthopedic", photo: "/placeholder.svg?height=100&width=100", experience: "15 years", timings: "Mon, Wed, Fri 9am to 3pm" },
-  { id: 3, name: "Dr. Mike Johnson", specialty: "Cardiologist", photo: "/placeholder.svg?height=100&width=100", experience: "12 years", timings: "Mon, Tues, Thurs 10am to 4pm" },
+  { id: 1, name: "Dr. Harish Verma", specialty: "General Physician", photo: "/placeholder.svg?height=100&width=100", experience: "10 years", timings: "Tues, Thurs 12pm to 6pm" },
+  { id: 2, name: "Dr. Savita Gupta", specialty: "Orthopedic", photo: "/placeholder.svg?height=100&width=100", experience: "15 years", timings: "Mon, Wed, Fri 9am to 3pm" },
+  { id: 3, name: "Dr. Pankaj Sharma", specialty: "Cardiologist", photo: "/placeholder.svg?height=100&width=100", experience: "12 years", timings: "Mon, Tues, Thurs 10am to 4pm" },
+  { id: 3, name: "Dr. Dinesh Tripathi", specialty: "Cardiologist", photo: "/placeholder.svg?height=100&width=100", experience: "7 years", timings: "Wed, Sat, Sun 11am to 3pm" },
 ];
 
 // Mock function to determine doctor specialty based on symptoms
@@ -77,7 +78,6 @@ export default function SymptomChecker() {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Symptom Checker</h1>
       <form onSubmit={handleSubmit} className="mb-6">
         <Label htmlFor="symptoms">Describe your symptoms:</Label>
         <Textarea
@@ -109,7 +109,7 @@ export default function SymptomChecker() {
                   <CardTitle>{doctor.name}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <img src={doctor.photo} alt={doctor.name} className="w-24 h-24 rounded-full mb-2" />
+                  <img src={'doctor.jpeg'} alt={doctor.name} className="w-24 h-24 rounded-full mb-2" />
                   <p><strong>Specialty:</strong> {doctor.specialty}</p>
                   <p><strong>Experience:</strong> {doctor.experience}</p>
                   <p><strong>Timings:</strong> {doctor.timings}</p>

@@ -2,11 +2,11 @@ import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [
-  { name: 'Jan', weight: 70, bloodPressure: 120, sugarLevel: 100 },
-  { name: 'Feb', weight: 69, bloodPressure: 118, sugarLevel: 98 },
-  { name: 'Mar', weight: 68, bloodPressure: 116, sugarLevel: 97 },
-  { name: 'Apr', weight: 68, bloodPressure: 115, sugarLevel: 96 },
-  { name: 'May', weight: 67, bloodPressure: 114, sugarLevel: 95 },
+  { name: '01/12/2024', weight: 87, bloodPressure: 120, sugarLevel: 100 },
+  { name: '02/12/2024', weight: 86, bloodPressure: 118, sugarLevel: 98 },
+  { name: '03/12/2024', weight: 86, bloodPressure: 116, sugarLevel: 97 },
+  { name: '04/12/2024', weight: 85, bloodPressure: 115, sugarLevel: 96 },
+  { name: '05/12/2024', weight: 87, bloodPressure: 114, sugarLevel: 98 },
 ];
 
 export default function HealthProgress() {

@@ -7,10 +7,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 
 // Mock patient data
 const initialPatients = [
-  { id: 1, name: "John Doe", lastVisit: "2023-06-01", urgency: "High" },
-  { id: 2, name: "Jane Smith", lastVisit: "2023-05-28", urgency: "Low" },
-  { id: 3, name: "Alice Johnson", lastVisit: "2023-06-02", urgency: "Medium" },
-  { id: 4, name: "Bob Williams", lastVisit: "2023-06-05", urgency: "New" },
+  { id: 1, name: "Yash Kanodia", lastVisit: "2023-06-01", urgency: "New" },
+  { id: 2, name: "Aditi Dagar", lastVisit: "2023-05-28", urgency: "High" },
+  { id: 3, name: "Bhumpreet", lastVisit: "2023-06-02", urgency: "Medium" },
+  { id: 4, name: "Chota Bheem", lastVisit: "2023-06-05", urgency: "New" },
 ];
 
 export default function DoctorPatientsPage() {

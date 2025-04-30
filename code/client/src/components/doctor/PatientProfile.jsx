@@ -7,17 +7,63 @@ export default function PatientProfile({ selectedPatient, onUrgencyChange }) {
   const [urgency, setUrgency] = useState(selectedPatient.urgency);
 
   // Mock medical history data
-  const medicalHistory = [
-    { date: "2023-05-15", event: "Annual check-up" },
-    { date: "2023-03-10", event: "Flu vaccination" },
-    { date: "2022-11-22", event: "Sprained ankle" },
-    // Add more mock history as needed
-  ];
+  // const medicalHistorys= [
+  //   [{ date: "2023-05-15", event: "Annual check-up" },
+  //   { date: "2023-03-10", event: "Coronary Stent Check" },
+  //   { date: "2022-11-22", event: "Sprained ankle" }],
+  //   [{ date: "2023-05-15", event: "Annual check-up" },
+  //     { date: "2023-03-10", event: "Cardio Test" },
+  //     { date: "2022-11-22", event: "Heart Attack" }],
+  //     [{ date: "2023-05-15", event: "Annual check-up" },
+  //       { date: "2023-03-10", event: "Shortness of Breath" },
+  //       { date: "2022-11-22", event: "Blood Clots" }],
+  //       [{ date: "2023-05-15", event: "Heart Surgery Followup" },
+  //         { date: "2023-03-10", event: "Stunt Adviced" },
+  //         { date: "2022-11-22", event: "Sprained ankle" }]
+  //   // Add more mock history as needed
+  // ];
 
   const handleUrgencyChange = (value) => {
     // setUrgency(value);
     onUrgencyChange(selectedPatient.id, value);
   };
+
+  const medicalHistory = (() => {
+    const medicalHistorys = [
+      [{ date: "2023-05-15", event: "Annual check-up" },
+        { date: "2023-03-10", event: "Coronary Stent Check" },
+        { date: "2022-11-22", event: "Sprained ankle" }],
+        [{ date: "2023-05-15", event: "Annual check-up" },
+          { date: "2023-03-10", event: "Coronary Stent Check" },
+          { date: "2022-11-22", event: "Sprained ankle" }],
+          [{ date: "2023-05-15", event: "Annual check-up" },
+            { date: "2023-03-10", event: "Coronary Stent Check" },
+            { date: "2022-11-22", event: "Sprained ankle" }],
+            [{ date: "2023-05-15", event: "Annual check-up" },
+              { date: "2023-03-10", event: "Coronary Stent Check" },
+              { date: "2022-11-22", event: "Sprained ankle" }]
+    ];
+    return medicalHistorys[Math.floor(Math.random() * medicalHistorys.length)];
+  })
+
+  // const medicalHistory = () => {
+  //   const medicalHistorys = [
+  //     [{ date: "2023-05-15", event: "Annual check-up" },
+  //       { date: "2023-03-10", event: "Coronary Stent Check" },
+  //       { date: "2022-11-22", event: "Sprained ankle" }],
+  //       [{ date: "2023-05-15", event: "Annual check-up" },
+  //         { date: "2023-03-10", event: "Cardio Test" },
+  //         { date: "2022-11-22", event: "Heart Attack" }],
+  //         [{ date: "2023-05-15", event: "Annual check-up" },
+  //           { date: "2023-03-10", event: "Shortness of Breath" },
+  //           { date: "2022-11-22", event: "Blood Clots" }],
+  //           [{ date: "2023-05-15", event: "Heart Surgery Followup" },
+  //             { date: "2023-03-10", event: "Stunt Adviced" },
+  //             { date: "2022-11-22", event: "Sprained ankle" }]
+  //   ];
+  //   return medicalHistorys[Math.floor(Math.random() * medicalHistorys.length)];
+  //   // return tips;
+  // };
 
   return (
     <Card className="mb-6">
@@ -48,11 +94,15 @@ export default function PatientProfile({ selectedPatient, onUrgencyChange }) {
         <h3 className="font-semibold mb-2">Medical History</h3>
         <ScrollArea className="h-40">
           <ul className="space-y-2">
-            {medicalHistory.map((event, index) => (
+            {medicalHistory()[0].date ? (
+              medicalHistory().map((event, index) => (
               <li key={index} className="text-sm">
-                <span className="font-medium">{event.date}:</span> {event.event}
+              <span className="font-medium">{event.date}:</span> {event.event}
               </li>
-            ))}
+              ))
+            ) : (
+              <p>No medical history available.</p>
+            )}
           </ul>
         </ScrollArea>
       </CardContent>

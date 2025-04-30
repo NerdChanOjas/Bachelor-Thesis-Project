@@ -20,7 +20,7 @@ const fetchLatestReport = () => ({
   content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
 });
 
-const analyzeReport = () => "Based on your latest blood work, your cholesterol levels have improved. Keep up the good work with your diet and exercise routine!";
+const analyzeReport = () => "The report shows that Yash K. recently had a mild heart attack, likely due to high cholesterol, excess fat in the blood, and a lack of physical activity. His blood pressure and sugar levels are a bit higher than normal, which could lead to further health issues if not addressed. While his heart shows some mild weakness, there’s no major damage. A healthier diet, regular exercise, stress management, and routine checkups are vital for recovery and preventing future problems.";
 
 const fetchAllReports = () => [
   { id: 1, name: "Blood Test Results", date: "2023-06-01", summary: "Normal results across all parameters.", file: "blood_test_2023_06_01.pdf" },
@@ -94,7 +94,8 @@ export default function QuickActions() {
 
   const handleViewReport = (file) => {
     // In a real application, this would open the file in a new tab
-    window.open(`/reports/${file}`, '_blank');
+      window.open('https://pii-detection-sih.s3.ap-south-1.amazonaws.com/HEALTH+REPORT+YASH+K..pdf', '_blank');
+    // window.open(`/reports/${file}`, '_blank');
   };
 
   return (

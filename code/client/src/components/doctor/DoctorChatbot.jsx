@@ -17,8 +17,8 @@ export default function DoctorChatbot() {
       setMessages([...messages, { text: input, sender: "user" }]);
       // Here you would typically send the message to your backend for processing
       setTimeout(() => {
-        setMessages(prev => [...prev, { text: "I've received your message. How else can I help?", sender: "bot" }]);
-      }, 1000);
+        setMessages(prev => [...prev, { text: "Yash Kanodia, a 36-year-old male, recently experienced a mild heart attack. He stands 176 cm tall and weighs 87 kg, giving him a BMI of approximately 28.1, which classifies him as overweight and indicates a potential risk factor for cardiovascular disease. The occurrence of a cardiac event at his age suggests the need to investigate underlying contributors such as lifestyle factors, stress, genetic predisposition, or conditions like hypertension, diabetes, or hyperlipidemia. Immediate medical intervention should focus on cardiac medications such as antiplatelets, beta-blockers, or statins, alongside a comprehensive lifestyle modification plan emphasizing a heart-healthy diet and weight management. A thorough cardiac evaluation, including tests like an ECG, echocardiogram, and stress test, is essential, along with regular follow-ups to monitor his recovery and implement preventive measures against future episodes.", sender: "bot" }]);
+      }, 9000);
       setInput("");
     }
   };

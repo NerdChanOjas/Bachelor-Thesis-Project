@@ -18,8 +18,8 @@ export default function ChatbotInterface() {
       // Here you would typically send the message to your backend for processing
       // For now, we'll just simulate a response
       setTimeout(() => {
-        setMessages(prev => [...prev, { text: "I've received your message. How else can I help?", sender: "bot" }]);
-      }, 1000);
+        setMessages(prev => [...prev, { text: "You recently experienced a mild heart attack, which is often caused by high cholesterol levels, slightly elevated blood pressure, and the effects of a sedentary lifestyle. Your blood sugar levels are also slightly higher than normal, indicating the need for better diet control. Your heart is showing mild weakness but no major damage, which is a positive sign for recovery with the right care. \n To support your recovery, focus on eating foods that promote heart health. Incorporate plenty of fresh fruits like apples, oranges, and berries, as well as vegetables such as spinach, broccoli, and carrots, into your meals. Whole grains like brown rice, oats, and whole-grain bread are excellent for maintaining energy while being heart-friendly. Lean proteins like skinless chicken, fish (especially salmon and tuna), and plant-based options such as beans and lentils should form a key part of your diet. Healthy fats from avocado, nuts, seeds, and olive oil are beneficial in moderation. Opt for low-fat dairy products like yogurt and skim milk. Stay hydrated with water and herbal teas. Avoid fried or processed foods, sugary snacks, and salty items as they can put more strain on your heart. This diet will help you regain strength and improve overall health.", sender: "bot" }]);
+      }, 7000);
       setInput("");
     }
   };

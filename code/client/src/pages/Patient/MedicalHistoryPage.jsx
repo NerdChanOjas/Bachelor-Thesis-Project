@@ -6,11 +6,12 @@ import DashboardSidebar from "../../components/patient/DashboardSidebar";
 
 // Mock function to fetch patient reports
 const fetchPatientReports = () => [
-  { id: 1, name: "Blood Test Results", date: "2023-06-01", analysis: "Normal results across all parameters.", file: "blood_test_2023_06_01.pdf" },
-  { id: 2, name: "X-Ray Report", date: "2023-05-15", analysis: "No abnormalities detected in chest X-ray.", file: "x_ray_2023_05_15.pdf" },
-  { id: 3, name: "Annual Physical", date: "2023-04-01", analysis: "Overall health is good. Recommended lifestyle changes discussed.", file: "annual_physical_2023_04_01.pdf" },
-  { id: 4, name: "MRI Scan", date: "2023-03-10", analysis: "No significant findings in brain MRI.", file: "mri_scan_2023_03_10.pdf" },
-  { id: 5, name: "Cholesterol Test", date: "2023-02-20", analysis: "Cholesterol levels within normal range.", file: "cholesterol_test_2023_02_20.pdf" },
+  { id: 1, name: "Health Test Results", date: "2024-12-01", analysis: "Signs of higher cholestrol.", file: "https://pii-detection-sih.s3.ap-south-1.amazonaws.com/HEALTH+REPORT+YASH+K..pdf" },
+  { id: 2, name: "Blood Test Results", date: "2024-06-01", analysis: "Normal results across all parameters.", file: "https://pii-detection-sih.s3.ap-south-1.amazonaws.com/BLOOD+TEST+REPORT+YASH+K..pdf" },
+  { id: 3, name: "X-Ray Report", date: "2024-05-15", analysis: "No abnormalities detected in chest X-ray.", file: "x_ray_2023_05_15.pdf" },
+  { id: 4, name: "Annual Physical", date: "2024-04-01", analysis: "Overall health is good. Recommended lifestyle changes discussed.", file: "https://pii-detection-sih.s3.ap-south-1.amazonaws.com/ANNUAL+CHECKUP+REPORT+YASH+K..pdf" },
+  { id: 5, name: "MRI Scan", date: "2024-03-10", analysis: "No significant findings in brain MRI.", file: "mri_scan_2023_03_10.pdf" },
+  { id: 6, name: "Cholesterol Test", date: "2024-02-20", analysis: "Cholesterol levels within normal range.", file: "cholesterol_test_2023_02_20.pdf" },
 ];
 
 export default function MedicalHistoryPage() {
@@ -18,7 +19,7 @@ export default function MedicalHistoryPage() {
 
   const handleViewReport = (file) => {
     // In a real application, this would open the file in a new tab
-    window.open(`/reports/${file}`, '_blank');
+    window.open(`${file}`, '_blank');
   };
 
   return (

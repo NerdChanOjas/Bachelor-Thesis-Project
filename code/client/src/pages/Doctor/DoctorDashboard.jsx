@@ -5,10 +5,10 @@ import PatientProfile from '../../components/doctor/PatientProfile';
 
 // Mock patient data with urgency tracking
 const initialPatients = [
-  { id: 1, name: "John Doe", lastVisit: "2023-06-01", urgency: "High" },
-  { id: 2, name: "Jane Smith", lastVisit: "2023-05-28", urgency: "Low" },
-  { id: 3, name: "Alice Johnson", lastVisit: "2023-06-02", urgency: "Medium" },
-  { id: 4, name: "Bob Williams", lastVisit: "2023-06-05", urgency: "New" },
+  { id: 1, name: "Yash Kanodia", lastVisit: "2023-06-01", urgency: "New" },
+  { id: 2, name: "Aditi Dagar", lastVisit: "2023-05-28", urgency: "High" },
+  { id: 3, name: "Bhumpreet", lastVisit: "2023-06-02", urgency: "Medium" },
+  { id: 4, name: "Chota Bheem", lastVisit: "2023-06-05", urgency: "New" },
 ];
 
 export default function DoctorDashboard() {
@@ -32,7 +32,7 @@ export default function DoctorDashboard() {
     <div className="flex h-screen bg-background">
       <DoctorSidebar />
       <main className="flex-1 overflow-y-auto p-6">
-        <h1 className="text-3xl font-bold mb-6">Doctor Dashboard</h1>
+        <h1 className="text-3xl font-bold mb-6">Welcome Mr. Pankaj</h1>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           <div className="md:col-span-1 lg:col-span-1">
             <PatientList 

@@ -8,15 +8,15 @@ import { ScrollArea } from "../../components/ui/scroll-area";
 const patientReports = [
   {
     id: 1,
-    name: "John Doe",
+    name: "Yash Kanodia",
     reports: [
-      { id: 1, name: "Blood Test", date: "2023-06-01", file: "blood_test.pdf" },
-      { id: 2, name: "X-Ray", date: "2023-05-15", file: "x_ray.pdf" },
+      { id: 1, name: "Blood Test", date: "2024-06-01", file: "https://pii-detection-sih.s3.ap-south-1.amazonaws.com/BLOOD+TEST+REPORT+YASH+K..pdf" },
+      { id: 2, name: "Health Report", date: "2024-12-01", file: "https://pii-detection-sih.s3.ap-south-1.amazonaws.com/HEALTH+REPORT+YASH+K..pdf" },
     ]
   },
   {
     id: 2,
-    name: "Jane Smith",
+    name: "Aditi Dagar",
     reports: [
       { id: 3, name: "MRI Scan", date: "2023-06-02", file: "mri_scan.pdf" },
     ]
@@ -30,6 +30,7 @@ export default function DoctorReportsPage() {
   const handleDownload = (file) => {
     // In a real application, this would trigger a file download
     console.log(`Downloading file: ${file}`);
+    window.open(`${file}`, '_blank');
   };
 
   return (
@@ -67,7 +68,7 @@ export default function DoctorReportsPage() {
                       <p className="font-medium">{report.name}</p>
                       <p className="text-sm text-muted-foreground">{report.date}</p>
                     </div>
-                    <Button onClick={() => handleDownload(report.file)}>Download</Button>
+                    <Button onClick={() => handleDownload(report.file)}>View</Button>
                   </div>
                 ))}
               </ScrollArea>

@@ -7,8 +7,8 @@ import { Search, Upload, Eye } from 'lucide-react';
 
 // Mock patient data
 const patients = [
-  { id: 1, name: "John Doe", email: "john@example.com" },
-  { id: 2, name: "Jane Smith", email: "jane@example.com" },
+  { id: 1, name: "Yash Kanodia", email: "yashkanodia@gmail.com" },
+  { id: 2, name: "Aditi Dagar", email: "aditidagar11@gmail.com" },
   // Add more mock patients as needed
 ];
 

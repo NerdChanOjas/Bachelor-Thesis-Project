@@ -14,19 +14,19 @@ export default function PersonalProfile() {
             <AvatarFallback>JD</AvatarFallback>
           </Avatar>
           <div>
-            <h2 className="text-xl font-semibold">John Doe</h2>
+            <h2 className="text-xl font-semibold">Yash K.</h2>
             <p className="text-sm text-muted-foreground">Age: 35</p>
           </div>
         </div>
         <div className="mt-4">
           <h3 className="font-semibold">Health Summary</h3>
-          <p className="text-sm text-muted-foreground">Generally healthy, regular check-ups advised</p>
+          <p className="text-sm text-muted-foreground">Recently suffered hearth attack, regular check-ups advised</p>
         </div>
         <div className="mt-4">
           <h3 className="font-semibold">Recent Activities</h3>
           <ul className="list-disc list-inside text-sm text-muted-foreground">
-            <li>Blood test (2 days ago)</li>
-            <li>Dentist appointment (1 week ago)</li>
+            <li>Blood test (1 days ago)</li>
+            <li>Annual Physical Checkup (3 days ago)</li>
           </ul>
         </div>
       </CardContent>
