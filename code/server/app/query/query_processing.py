@@ -12,7 +12,7 @@ router = APIRouter(
 )
 
 # Initialize Pinecone
-pc = Pinecone(api_key="981f28b2-931a-46b5-aea7-47b1856b75c1")
+pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
 index = pc.Index("docs")
 
 # Load Embedding Model

@@ -2,7 +2,7 @@ import requests
 
 async def get_embedding_from_hf(text: str):
     headers = {
-        "Authorization": f"Bearer 981f28b2-931a-46b5-aea7-47b1856b75c1",
+        "Authorization": f"Bearer ",
     }
     json_data = {
         "inputs": text
