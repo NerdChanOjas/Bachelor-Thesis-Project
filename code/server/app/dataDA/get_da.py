@@ -8,7 +8,7 @@ from transformers import pipeline
 from fastapi import APIRouter, HTTPException
 
 
-DATABASE_URL = "postgres://postgres:0710@localhost:5432/btp"
+DATABASE_URL = "postgresql://nerdchanojas:0710@localhost:5432/btp"
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(expire_on_commit = False, autoflush = False, bind=engine )
 Base = declarative_base()

@@ -50,7 +50,7 @@ export class FileController{
         }
     }
 
-    static async getFiles( res: Response ) {
+    static async getFiles( req: Request, res: Response ) {
         const params : RetrieveParams = {
             Bucket: process.env.AWS_BUCKET!
         }

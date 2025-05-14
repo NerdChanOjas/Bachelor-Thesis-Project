@@ -32,7 +32,7 @@ export class AuthController {
         	// Check if user exists=-
 			const existingUser = await db.select().from(usersTable).where(eq(usersTable.email, email))
 
-        	if (existingUser) {
+        	if (!existingUser) {
           		return res.status(400).json({ message: 'User already exists' });
         	}
   
@@ -109,6 +109,7 @@ export class AuthController {
 				res.status(201).json(result)
 
 			} else if (req.body.type === "Provider") {
+				console.log("Pro Exec")
 				const result = await db.transaction(async (tx) => {
 					const [insertedUser] = await tx.insert(usersTable).values({
 						user_id: userId,
@@ -118,7 +119,7 @@ export class AuthController {
 						type: type,
 						password_hashed: hashedPassword,
 						phone: req.body.phone,
-						gender: req.body.gender,
+						gender: req.body.gender ? req.body.gender : "m",
 						dob: req.body.dob ? new Date(req.body.dob) : new Date("1999-01-01"),
 						updated_at: new Date()
 					}).returning();
@@ -172,6 +173,7 @@ export class AuthController {
         	}
 			
 			try {
+				console.log("trying to send otp")
 				await AuthService.sendOTPEmail(req.body.email);
 			} catch (otpError) {
 				console.error('OTP Email Send Error:', otpError);
@@ -184,6 +186,7 @@ export class AuthController {
         	return res.status(200).json({
           		message: 'Login successful with data',
           		user: {
+					message: "OTP sent to designated email ID",
             		id: user.user_id,
             		email: user.email,
             		role: user.type
@@ -198,41 +201,78 @@ export class AuthController {
     }
 
 	//-------------------------------------------------------------OTP Verification---------------------------------------------------
-	static async verifyOTP(req: Request, res: Response){
+	static verifyOTP = async (req: Request, res: Response) : Promise<any> => {
 		try {
-			const {otp, type} = req.body;
+			const {otp, type, email} = req.body;
 			
 			let secrectBase32 = process.env.JWT_SECRET_KEY!
+			
+			console.log("Received OTP:", otp);
+    		console.log("OTP type:", typeof otp);
+    		console.log("Secret key used:", secrectBase32);
+    		console.log("Current time:", Date.now());
+    		console.log("OTP expiry time:", AuthService.otpExpiry);
 
+			//check for expired OTP
 			if (Date.now() > AuthService.otpExpiry) {
-				res.status(403).json({
+				console.log("OTP expired");
+				return res.status(403).json({
 					"message": "OTP expired"
 				})
 			}
 
+			const tokenToVerify = typeof otp === 'string' ? otp.trim() : String(otp);
+
+			console.log("Token to verify:", tokenToVerify);
+
 			const isValid = speakeasy.totp.verify({
 				secret: secrectBase32,
 				digits: 4, 
-				token: otp,
+				token: tokenToVerify,
 				step: 60,
-				window: 1
+				window: 5
 			})
+			
+			// if (!isValid) {
+			// 	return res.status(400).json({
+			// 		status: "FAIL",
+			// 		message: "Invalid OTP"
+			// 	});
+			// }
+			console.log("OTP is correct");
 
-			let userObj : any;
-			if (isValid) {
-				console.log("OTP is correct");
-				userObj = (async (type: string) => {
-					if (type == "Patient")
-						return await db.select().from(usersTable).leftJoin(patientTable, eq(usersTable.user_id, patientTable.user_id))
-					else if (type == "Doctor")
-						return await db.select().from(usersTable).leftJoin(doctorTable, eq(usersTable.user_id, doctorTable.user_id))
-					else if (type == "Provider")
-						return await db.select().from(usersTable).leftJoin(providerTable, eq(usersTable.user_id, providerTable.user_id))
-				})
+			const getUserData = async (type: string) => {
+				if (type == "Patient"){
+					return await db.select().from(usersTable).leftJoin(patientTable, eq(usersTable.user_id, patientTable.user_id)).where(eq(usersTable.email, email))
+				}
+				else if (type == "Doctor"){
+					return await db.select().from(usersTable).leftJoin(doctorTable, eq(usersTable.user_id, doctorTable.user_id)).where(eq(usersTable.email, email))
+				}
+				else if (type == "Provider"){
+					return await db.select().from(usersTable).leftJoin(providerTable, eq(usersTable.user_id, providerTable.user_id)).where(eq(usersTable.email, email))
+				}
+				else throw new Error("Invalid user type")
 			}
+
+			// let userObj : any;
+			// if (isValid) {
+			// 	console.log("OTP is correct");
+			// 	userObj = (async (type: string) => {
+			// 		if (type == "Patient")
+			// 			return await db.select().from(usersTable).leftJoin(patientTable, eq(usersTable.user_id, patientTable.user_id))
+			// 		else if (type == "Doctor")
+			// 			return await db.select().from(usersTable).leftJoin(doctorTable, eq(usersTable.user_id, doctorTable.user_id))
+			// 		else if (type == "Provider")
+			// 			return await db.select().from(usersTable).leftJoin(providerTable, eq(usersTable.user_id, providerTable.user_id))
+			// 	})
+			// }
+
+			const userObj = await getUserData(type);
 			console.log(userObj);
-			const accessToken = await generateAccessToken(userObj);
+			
+			const accessToken = await generateAccessToken(userObj[0]);
 			console.log(accessToken);
+
 			const cookieOptions = {
 				maxAge: 3600000 * 24,
 				httpOnly: false

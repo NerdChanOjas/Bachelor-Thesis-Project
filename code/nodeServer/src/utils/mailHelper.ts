@@ -7,15 +7,16 @@ import { usersTable } from "../db/schema";
 import { eq } from "drizzle-orm";
 
 export class AuthService {
-	static otpExpiry = 0;	
+	static otpExpiry = 36000;	
 
     static generateOTP(secretBase32: string): string {
         let token = speakeasy.totp({
             secret: secretBase32, 
             digits: 4,
             step: 60, 
+			encoding: "ascii"
         });
-            
+        console.log("OTP generated: ", token)
         return token;
     }
 
@@ -33,7 +34,7 @@ export class AuthService {
     	try {
             const secretBase32 = process.env.OTP_KEY;
             let otp = AuthService.generateOTP(secretBase32 ? secretBase32 : "secret");
-			this.otpExpiry = Date.now() + (6000*5);
+			this.otpExpiry = Date.now() + (10*6*1000);
       		await transporter.sendMail({
         		from: process.env.EMAIL_ADDRESS,
         		to: email,
@@ -44,6 +45,7 @@ export class AuthService {
             	<p>This OTP will expire in 10 minutes.</p>
           		`,
       		});
+			console.log("Email Sent to: ", email)
     	} catch (error) {
       		console.error("Email sending failed", error);
       		throw new Error("Failed to send OTP");

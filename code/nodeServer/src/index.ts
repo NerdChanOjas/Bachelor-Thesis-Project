@@ -21,8 +21,8 @@ app.use(bodyParser.json());
 app.use('/api/user', userRoutes)
 app.use('/api/file', fileRoutes)
 
-app.get('/hello', ( res: Response ) => {
-    res.json({ 
+app.get('/hello', (req: Request, res: Response) => {
+    res.status(200).json({ 
         message: 'Hello World from TypeScript Express!',
     });
 });

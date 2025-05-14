@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 from pydantic import BaseModel
 from typing import List, Optional
 
-DATABASE_URL = "postgres://postgres:0710@localhost:5432/btp"
+DATABASE_URL = "postgresql://nerdchanojas:0710@localhost:5432/btp"
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(expire_on_commit = False, autoflush = False, bind=engine )
 Base = declarative_base()
@@ -18,7 +18,7 @@ router = APIRouter(
 # SQLAlchemy Model
 class Trend(Base):
     __tablename__ = "trends"
-    patient_id = Column(String, index=True)
+    patient_id = Column(String, primary_key=True, index=True)
     metric_name = Column(String, index=True)
     metric_value = Column(Float)
     recorded_at = Column(DateTime, default=datetime.utcnow)

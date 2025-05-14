@@ -2,9 +2,10 @@ from fastapi import APIRouter, Depends, HTTPException
 from sentence_transformers import SentenceTransformer
 from pinecone import Pinecone, ServerlessSpec
 from transformers import pipeline
+from uuid import uuid4
 
-
-from .schemas import EmbeddingRequest, QueryRequest
+from .helper_functions import get_embedding_from_hf, chunk_text
+from ..models.schemas import EmbeddingRequest, QueryRequest
 
 router = APIRouter(
     prefix="/query"
@@ -15,10 +16,42 @@ pc = Pinecone(api_key="981f28b2-931a-46b5-aea7-47b1856b75c1")
 index = pc.Index("docs")
 
 # Load Embedding Model
-model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
+# model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 # Load Local Text Generation Model
 # text_generator = pipeline("text-generation", model="EleutherAI/gpt-neo-2.7B")
 
+@router.post("/generate-embeddings/")
+async def generate_embedding(request: EmbeddingRequest):
+    try:
+        text = request.text.strip()
+        if not text:
+            raise HTTPException(status_code=400, detail="Text can't be empty")
+        document_id = request.document_id or str(uuid4())
+
+        chunks = chunk_text(text)
+
+        to_upsert = []
+        for i, chunk in enumerate(chunks):
+            embedding = get_embedding_from_hf()
+            chunk_id = f"{document_id}_chunk_{i}"
+
+            metadata = {
+                "document_id": document_id,
+                "chunk_id": i,
+                "text": chunk,
+                **request.metadata  # Optional additional metadata
+            }
+            to_upsert.append((chunk_id, embedding, metadata))
+        index.upsert(to_upsert)
+        return {
+            "message": f"{len(chunks)} chunks embedded and stored successfully.",
+            "document_id": document_id,
+            "chunks_stored": len(chunks)
+        }
+    except Exception as e:
+        raise HTTPException(status_code = 500, detail = f"An error occured: {str(e)}")
+
+'''
 @router.post("/generate-embedding/")
 async def generate_embedding(request: EmbeddingRequest):
     try:
@@ -28,7 +61,7 @@ async def generate_embedding(request: EmbeddingRequest):
             raise HTTPException(status_code=400, detail="Text cannot be empty.")
 
         # Step 2: Generate Embedding
-        embedding = model.encode(text).tolist()
+        embedding = get_embedding_from_hf()
 
         # Step 3: Store Embedding in Pinecone
         pinecone_metadata = {
@@ -46,7 +79,7 @@ async def generate_embedding(request: EmbeddingRequest):
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"An error occurred: {str(e)}")
-    
+'''
 
 '''
 curl -X POST "http://127.0.0.1:8000/generate-embedding/" \

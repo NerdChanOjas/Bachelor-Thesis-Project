@@ -5,7 +5,7 @@ export const usersTable = pgTable("Users", {
     name: varchar({ length: 255 }).notNull(),
     age: integer().notNull(),
     email: varchar({ length: 255 }).notNull().unique(),
-    type: char(),
+    type: varchar({length: 255}),
     password_hashed: varchar(),
     phone: varchar({length: 10}),
     gender: char({length: 1}),
